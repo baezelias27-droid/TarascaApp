@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Finance App</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <script type="module" src="./js/main.js"></script>
+  <link rel="icon" href="data:,">
+
+</head>
+<body>
+
+<!-- MAIN -->
+<div id="mainScreen">
+  <h1>Balance</h1>
+  <h2 id="balance">$0</h2>
+
+  <p>Deuda total: $<span id="debtTotal">0</span></p>
+  <p>Balance real: $<span id="realBalance">0</span></p>
+
+  <input id="amount" placeholder="Monto">
+  <input id="description" placeholder="Descripción">
+  <input id="installments" placeholder="Cuotas (solo préstamo)">
+
+  <select id="operationType">
+    <option value="normal">Normal</option>
+    <option value="debt">Deuda</option>
+    <option value="loan">Préstamo</option>
+  </select>
+
+  <button id="incomeBtn">Ingreso</button>
+  <button id="expenseBtn">Egreso</button>
+
+  <hr>
+
+  <button id="viewMovementsBtn">Movimientos</button>
+  <button id="viewDebtsBtn">Deudas</button>
+  <button id="viewLoansBtn">Préstamos</button>
+</div>
+
+<!-- MOVIMIENTOS -->
+<div id="movementsScreen" class="hidden">
+  <h2>Movimientos</h2>
+  <div id="movementsList"></div>
+  <button id="backFromMovements">Volver</button>
+</div>
+
+<!-- DEUDAS -->
+<div id="debtsScreen" class="hidden">
+  <h2>Deudas</h2>
+  <div id="debtsList"></div>
+  <button id="backFromDebts">Volver</button>
+</div>
+
+<!-- PRÉSTAMOS -->
+<div id="loansScreen" class="hidden">
+  <h2>Préstamos</h2>
+  <div id="loansList"></div>
+  <button id="backFromLoans">Volver</button>
+</div>
+
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>
